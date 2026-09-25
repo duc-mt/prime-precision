@@ -1,4 +1,6 @@
-# Aim
+# prime-precision
+
+## Aim
 I came up with three different algorithms for determining whether a number is
 prime. The core of this project is to adopt different perspectives on a
 problem, with each way of handling a problem will have pros or cons over
