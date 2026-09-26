@@ -16,6 +16,7 @@
 The time module has a function called time which is able to perform the timing.
 The check-prime-functions module comprises 3 functions to measure.
 """
+
 from time import time
 
 import prime_checker_functions as func
@@ -23,10 +24,11 @@ import prime_checker_functions as func
 
 # ------------------------------- Main Function -------------------------------
 def main() -> None:
-    print('A program to check if a number is prime.',
-          'Return True if it is, False otherwise.',
-          'Also compares which function is the fastest.',
-          sep='\n',
+    print(
+        "A program to check if a number is prime.",
+        "Return True if it is, False otherwise.",
+        "Also compares which function is the fastest.",
+        sep="\n",
     )
 
     try:
@@ -42,30 +44,30 @@ def main() -> None:
 
     # function_a
     t0 = time()
-    print(f'{n:,} is {func.is_prime_a(n)}')
+    print(f"{n:,} is {func.is_prime_a(n)}")
     func.prime_lessthan(func.is_prime_a)
     t1 = time()
-    print(f'Function A: time taken = {round(t1 - t0, 4)} seconds.')
+    print(f"Function A: time taken = {round(t1 - t0, 4)} seconds.")
 
     func.line()
 
     # function_b
     t2 = time()
-    print(f'{n:,} is {func.is_prime_b(n)}')
+    print(f"{n:,} is {func.is_prime_b(n)}")
     func.prime_lessthan(func.is_prime_b)
     t3 = time()
-    print(f'Function B: time taken = {round(t3 - t2, 4)} seconds.')
+    print(f"Function B: time taken = {round(t3 - t2, 4)} seconds.")
 
     func.line()
 
     # function_c
     t4 = time()
-    print(f'{n:,} is {func.is_prime_c(n)}')
+    print(f"{n:,} is {func.is_prime_c(n)}")
     func.prime_lessthan(func.is_prime_c)
     t5 = time()
-    print(f'Function C: time taken = {round(t5 - t4, 4)} seconds.')
+    print(f"Function C: time taken = {round(t5 - t4, 4)} seconds.")
 
 
 # --------------------------- Call the Main Function --------------------------
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

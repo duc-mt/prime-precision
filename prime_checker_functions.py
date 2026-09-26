@@ -23,13 +23,14 @@ comprising all of the prime numbers less than 10000.
 
 The reason for this is to concisely measure the operation time of 3 functions.
 """
+
 from math import sqrt
 from typing import Callable, List
 
 
 # ---------------------------- Function Definitions ---------------------------
 def line() -> None:
-    print('-----------------------------------------------------------------------')
+    print("-----------------------------------------------------------------------")
 
 
 def is_prime_a(n: int) -> bool:
@@ -70,7 +71,7 @@ def prime_lessthan(function: Callable[[int], bool]) -> None:
         if function(i):
             result.append(i)
     print(
-        f'In a list of all prime numbers less than 10,000:\n'
-        f'The first ten are: {result[0:10]}\n'
-        f'The last ten are: {result[-10:]}'
+        f"In a list of all prime numbers less than 10,000:\n"
+        f"The first ten are: {result[0:10]}\n"
+        f"The last ten are: {result[-10:]}"
     )
