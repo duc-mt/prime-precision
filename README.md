@@ -1,5 +1,10 @@
 # prime-precision
 
+[![CI](https://github.com/username/prime-precision/actions/workflows/ci.yml/badge.svg)](https://github.com/username/prime-precision/actions/workflows/ci.yml)
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Aim
 I came up with three different algorithms for determining whether a number is
 prime. The core of this project is to adopt different perspectives on a

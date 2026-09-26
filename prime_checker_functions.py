@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 #
-# File:         prime-checker-functions.py
+# File:         prime_checker_functions.py
 # Author:       Tan Duc Mai
 # Email:        tan.duc.work@gmail.com
 # Date:         12-Aug-2021
@@ -10,7 +10,6 @@
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
 #
-
 
 # ------------------------------- Module Import -------------------------------
 """
@@ -25,14 +24,15 @@ comprising all of the prime numbers less than 10000.
 The reason for this is to concisely measure the operation time of 3 functions.
 """
 from math import sqrt
+from typing import Callable, List
 
 
 # ---------------------------- Function Definitions ---------------------------
-def line():
+def line() -> None:
     print('-----------------------------------------------------------------------')
 
 
-def is_prime_a(n):
+def is_prime_a(n: int) -> bool:
     if n < 2:
         return False
     sqrt_n = int(sqrt(n))
@@ -42,7 +42,7 @@ def is_prime_a(n):
     return True
 
 
-def is_prime_b(n):
+def is_prime_b(n: int) -> bool:
     if n > 1:
         if n == 2:
             return True
@@ -54,7 +54,7 @@ def is_prime_b(n):
     return False
 
 
-def is_prime_c(n):
+def is_prime_c(n: int) -> bool:
     divisible = 0
     for i in range(1, n + 1):
         if n % i == 0:
@@ -64,8 +64,8 @@ def is_prime_c(n):
     return False
 
 
-def prime_lessthan(function):
-    result = []
+def prime_lessthan(function: Callable[[int], bool]) -> None:
+    result: List[int] = []
     for i in range(2, 10000):
         if function(i):
             result.append(i)

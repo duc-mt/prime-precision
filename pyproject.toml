@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prime-precision"
+version = "0.1.0"
+description = "Three different functions to check if a number is prime."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Tan Duc Mai", email = "tan.duc.work@gmail.com" }
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0"
+]
+
+[tool.setuptools]
+py-modules = ["prime_checker_functions", "main"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+addopts = "--cov=. --cov-report=term-missing"
+testpaths = ["tests"]

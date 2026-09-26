@@ -11,25 +11,32 @@
 #   from a third party and without using any aids other than those cited.
 #
 
-
 # ------------------------------- Module Imports ------------------------------
 """
 The time module has a function called time which is able to perform the timing.
 The check-prime-functions module comprises 3 functions to measure.
 """
 from time import time
+
 import prime_checker_functions as func
 
 
 # ------------------------------- Main Function -------------------------------
-def main():
+def main() -> None:
     print('A program to check if a number is prime.',
           'Return True if it is, False otherwise.',
           'Also compares which function is the fastest.',
-          sep = '\n',
+          sep='\n',
     )
 
-    n = int(input("\nEnter a number for evaluation: "))
+    try:
+        user_input = input("\nEnter a number for evaluation: ")
+        n = int(user_input)
+    except ValueError:
+        print("Invalid input. Please enter an integer.")
+        return
+    except EOFError:
+        return
 
     func.line()
 
